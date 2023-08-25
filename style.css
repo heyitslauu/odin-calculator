@@ -1,6 +1,7 @@
 :root {
 	--cyan: #48d4ff;
 	--dark: #201e1e;
+    --supp-dark: #292727;
 }
 
 
@@ -9,4 +10,78 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+    background:var(--dark);
+    color: var(--cyan);
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem auto;
+}
+.activity-title {
+    padding: 1em 2em; 
+    text-align: center;
+}
+.calculator {
+    background-color: var(--supp-dark);
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+}
+
+.screen {
+    width: 100%;
+    background-color: var(--supp-dark);
+    padding: 1em 2em;
+    text-align: right;
+}
+
+
+.user-input {
+    padding: 1em 2em;
+    color: var(--dark);
+}
+.result {
+    padding: 1em 1em;
+    min-height: 45px;
+    color: var(--dark);
+}
+
+.display-screen{
+    display: flex;
+    background-color: gainsboro;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.numpad {
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+    padding: 1em 2em;
+}
+
+.grid-by-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px;
+    gap: 1em;
+}
+.grid-by-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    grid-template-rows: 40px;
+}
+
+.numpad button {
+    font-weight: bold;
+    font-size: 120%;
+    border: none;
+    background-color:  var(--dark);
+    color: var(--cyan);
 }
